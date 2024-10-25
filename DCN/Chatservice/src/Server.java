@@ -100,9 +100,11 @@ class Server {
     }
 
     private void broadcastMessage(String message) {
+        String[] parts = message.split(":");
         byte[] buffer = message.getBytes();
+        System.out.println(message);
         clients.forEach((username, client) -> {
-            if (!"OFFLINE".equals(client.status)) {
+            if (!"OFFLINE".equals(client.status) && !username.equals(parts[0])) {
                 try {
                     DatagramPacket packet = new DatagramPacket(
                             buffer, buffer.length, client.address, client.port

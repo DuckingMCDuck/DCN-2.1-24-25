@@ -65,15 +65,13 @@ public class Pop3Client {
             boolean foundSubject = false;
 
             while ((line = reader.readLine()) != null) {
-                if (line.equals(".")) {
-                    break;
-                }
 
                 if (line.toLowerCase().startsWith("subject:")) {
                     subjects.add("Message " + i + ": " + line.substring(8).trim());
                     foundSubject = true;
                     break;
                 }
+
             }
 
             if (!foundSubject) {
@@ -108,13 +106,32 @@ public class Pop3Client {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Read configuration from properties file or environment variables
-
+        BufferedReader consoleReader = new BufferedReader(new InputStreamReader(System.in));
         String server = "pop.gmail.com";
         int port = 995;
         String username = "pop3server1234@gmail.com";
         String password = "tdyw zltu lold vbzo";
+
+        System.out.println("When pressing 'enter' the following login details will used:" +
+                "\nServer: pop.gmail.com" +
+                "\nUsername: pop3server1234@gmail.com" +
+                "\nPassword: tdyw zltu lold vbzo" +
+                "\n\nWrite 'custom' for custom login details");
+        try {
+            if (consoleReader.readLine().equals("custom")) {
+                System.out.println("Server:");
+                server = consoleReader.readLine();
+                System.out.println("Username:");
+                username = consoleReader.readLine();
+                System.out.println("Password:");
+                password = consoleReader.readLine();
+            }
+        } catch (Exception ex){
+            System.out.println("Something went wrong!");
+            System.exit(0);
+        }
 
         Pop3Client client = new Pop3Client(server, port, username, password);
 

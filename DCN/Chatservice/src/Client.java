@@ -47,7 +47,7 @@ class Client {
             // Wait for acknowledgment
             new Thread(() -> {
                 try {
-                    Thread.sleep(2000); // Wait 2 seconds for ACK
+                    Thread.sleep(5000); // Wait 5 seconds for ACK
                     if (waitingForAck) {
                         System.out.println("Message delivery failed - no server acknowledgment received");
                         waitingForAck = false;
