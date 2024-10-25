@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DCN/Chatservice/Chatservice.iml" filepath="$PROJECT_DIR$/DCN/Chatservice/Chatservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/DCN-2.1-24-25.iml" filepath="$PROJECT_DIR$/.idea/DCN-2.1-24-25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DCN/POP3/POP3.iml" filepath="$PROJECT_DIR$/DCN/POP3/POP3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DCN/ReaderClient/ReaderClient.iml" filepath="$PROJECT_DIR$/DCN/ReaderClient/ReaderClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DCN/ReaderServer/ReaderServer.iml" filepath="$PROJECT_DIR$/DCN/ReaderServer/ReaderServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DCN/SMTP Server/SMTP Server.iml" filepath="$PROJECT_DIR$/DCN/SMTP Server/SMTP Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DCN/SecureChatApplication/SecureChatApplication.iml" filepath="$PROJECT_DIR$/DCN/SecureChatApplication/SecureChatApplication.iml" />
     </modules>
   </component>
 </project>
